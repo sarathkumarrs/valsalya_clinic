@@ -1,0 +1,742 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>Valsalya Speciality Clinic</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./index.css" />
+ 
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- HERO -->
+      <section class="heroCard" id="home">
+        <header>
+          <div class="heroTop">
+            <div class="brand">
+              <div aria-hidden="true" class="logo">
+                <img alt="Valsalya Clinic logo" src="./images/logofinal.png" />
+              </div>
+            </div>
+            <nav aria-label="Site navigation" class="nav">
+              <a class="active" href="#home">Home</a>
+              <a href="#specialities">Specialities</a>
+              <a href="#gallery">Gallery</a>
+              <a href="#reviews">Reviews</a>
+              <a href="#contact">Contact</a>
+            </nav>
+            <div class="actions">
+              <div class="branchWrap">
+                <button class="btn btnBranch" id="branchBtn">
+                  Our Branches
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    height="14"
+                    viewbox="0 0 24 24"
+                    width="14"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="dropdown" id="branchDropdown">
+                  <div class="ddItem selected" data-branch="Pallickal">
+                    <div>
+                      <div class="fw-800">Pallickal</div>
+                      <small>(Selected)</small>
+                    </div>
+                    <div aria-hidden="true" class="tick">
+                      <svg fill="none" viewbox="0 0 24 24">
+                        <path
+                          d="M6 12.5l4 4 8-9"
+                          stroke="#0e5aa7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2.3"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ddItem" data-branch="Second Branch Name">
+                    <div class="fw-800">Second Branch Name</div>
+                    <div aria-hidden="true" class="tick">
+                      <svg fill="none" viewbox="0 0 24 24">
+                        <path
+                          d="M6 12.5l4 4 8-9"
+                          stroke="#0e5aa7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2.3"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="btn btnPrimary"
+                href="https://wa.me/917907017504?text=Hi%20Valsalya%20Speciality%20Clinic%2C%20I%20want%20to%20book%20an%20appointment."
+                target="_blank"
+                rel="noopener"
+              >
+                Book Appointment
+              </a>
+            </div>
+          </div>
+        </header>
+        <div class="heroMain">
+          <div class="heroLeft">
+            <div class="heroContent">
+              <h1>
+                Valsalya Speciality Clinic:<br />Comprehensive Care,<br />Trusted
+                Experts.
+              </h1>
+              <p>
+                Providing world-class healthcare and advanced diagnostics for
+                the Pallickal community. Your health is our priority.
+              </p>
+              <div class="heroBtns">
+                <button class="soft" data-scroll-target="#specialities">
+                  View Specialities
+                </button>
+                <button class="ghost" data-scroll-target="#gallery">
+                  Check Gallery
+                </button>
+              </div>
+            </div>
+          </div>
+          <div aria-label="Hero image" class="heroRight">
+            <img
+              alt="Clinic Interior"
+              class="heroImg"
+              data-fallback="assets/hero.jpg"
+              src="./images/spotlightimage.png"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- ABOUT (optional anchor) -->
+      <div id="about" class="spacer-18"></div>
+      <!-- SPECIALITIES (NEXT SECTION ON SCROLL) -->
+      <section class="section" id="specialities">
+        <h2 class="sectionTitle">Our Specialities</h2>
+        <div class="specGrid">
+          <a class="specCard" href="specialities.html#orthopaedics">
+            <div aria-hidden="true" class="specIcon">
+              <svg fill="none" viewbox="0 0 24 24">
+                <path
+                  d="M9 5c2 0 3 1.8 3 4s-1 4-3 4-3-1.8-3-4 1-4 3-4Z"
+                  stroke-width="1.8"
+                ></path>
+                <path
+                  d="M12 10.5h6"
+                  stroke-linecap="round"
+                  stroke-width="1.8"
+                ></path>
+                <path
+                  d="M6 19c1.2-3.2 3-4.8 5-4.8S14.8 15.8 16 19"
+                  stroke-linecap="round"
+                  stroke-width="1.8"
+                ></path>
+              </svg>
+            </div>
+            <h3>Orthopaedics</h3>
+            <p>Dr. Akhilesh Arjun<br />(MBBS, MS ORTHO)</p>
+            <div class="time">Tue &amp; Thu: 6 PM - 8 PM</div>
+          </a>
+          <a class="specCard" href="specialities.html#dermatology--cosmetology">
+            <div aria-hidden="true" class="specIcon">
+              <svg fill="none" viewbox="0 0 24 24">
+                <path
+                  d="M12 4c2.2 2.6 4 4.2 4 6.5A4 4 0 0 1 12 14a4 4 0 0 1-4-3.5C8 8.2 9.8 6.6 12 4Z"
+                  stroke-width="1.8"
+                ></path>
+                <path
+                  d="M8.5 19c1 .7 2.2 1 3.5 1s2.5-.3 3.5-1"
+                  stroke-linecap="round"
+                  stroke-width="1.8"
+                ></path>
+              </svg>
+            </div>
+            <h3>Dermatology &amp;<br />Cosmetology</h3>
+            <p>Dr. Navadeep Ravi Kumar<br />(MBBS, DDVL)</p>
+            <div class="time">Wed: 2 PM - 3 PM</div>
+          </a>
+          <a class="specCard" href="specialities.html#paediatrics">
+            <div aria-hidden="true" class="specIcon">
+              <svg fill="none" viewbox="0 0 24 24">
+                <path
+                  d="M12 5c3 0 5 2 5 4.5S15 14 12 14 7 12 7 9.5 9 5 12 5Z"
+                  stroke-width="1.8"
+                ></path>
+                <path
+                  d="M8.2 19c1.2-2 2.6-3 3.8-3s2.6 1 3.8 3"
+                  stroke-linecap="round"
+                  stroke-width="1.8"
+                ></path>
+              </svg>
+            </div>
+            <h3>Paediatrics</h3>
+            <p>Dr. Rekha S<br />(MBBS, DCH)</p>
+            <div class="time">Sun: 9:30 AM - 10:30 AM</div>
+          </a>
+          <a
+            class="specCard"
+            href="specialities.html#pulmonology--sleep-medicine"
+          >
+            <div aria-hidden="true" class="specIcon">
+              <svg fill="none" viewbox="0 0 24 24">
+                <path
+                  d="M12 6v5"
+                  stroke-linecap="round"
+                  stroke-width="1.8"
+                ></path>
+                <path
+                  d="M12 11c-1.6-1.2-2.8-2-4-2-1.6 0-2.8 1.4-2.8 3.2V16c0 1.8 1.2 3.2 2.8 3.2 2.2 0 4-1.9 4-4.2"
+                  stroke-width="1.8"
+                ></path>
+                <path
+                  d="M12 11c1.6-1.2 2.8-2 4-2 1.6 0 2.8 1.4 2.8 3.2V16c0 1.8-1.2 3.2-2.8 3.2-2.2 0-4-1.9-4-4.2"
+                  stroke-width="1.8"
+                ></path>
+              </svg>
+            </div>
+            <h3>Pulmonology &amp; Sleep<br />Medicine</h3>
+            <p>Dr. Sajith S.L<br />(MBBS, MD)</p>
+            <div class="time">Wed: 6 PM - 7 PM</div>
+          </a>
+          <a class="specCard" href="specialities.html#ent">
+            <div aria-hidden="true" class="specIcon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  d="M7 6h10c1 0 2 .9 2 2v9c0 1.1-1 2-2 2H7c-1 0-2-.9-2-2V8c0-1.1 1-2 2-2Z"
+                  stroke-width="1.8"
+                ></path>
+                <path
+                  d="M12 8.5v8"
+                  stroke-linecap="round"
+                  stroke-width="1.8"
+                ></path>
+                <path
+                  d="M8.5 12.5h7"
+                  stroke-linecap="round"
+                  stroke-width="1.8"
+                ></path>
+              </svg>
+            </div>
+
+            <h3>ENT</h3>
+            <p>Dr. Rohan Abraham Rajan<br />(MBBS, DLO, DNB)</p>
+            <div class="time">Sat: 6 PM - 7 PM</div>
+          </a>
+
+          <a
+            class="specCard"
+            href="specialities.html#general-medicine--diabetology"
+          >
+            <div aria-hidden="true" class="specIcon">
+              <svg fill="none" viewbox="0 0 24 24">
+                <path
+                  d="M7 6h10c1 0 2 .9 2 2v9c0 1.1-1 2-2 2H7c-1 0-2-.9-2-2V8c0-1.1 1-2 2-2Z"
+                  stroke-width="1.8"
+                ></path>
+                <path
+                  d="M12 8.5v8"
+                  stroke-linecap="round"
+                  stroke-width="1.8"
+                ></path>
+                <path
+                  d="M8.5 12.5h7"
+                  stroke-linecap="round"
+                  stroke-width="1.8"
+                ></path>
+              </svg>
+            </div>
+            <h3>General Medicine &amp;<br />Diabetology</h3>
+            <p>Dr. Shahina Abdul Rahman<br />(MBBS, MD)</p>
+            <div class="time">Fri: 7 PM - 8 PM</div>
+          </a>
+        </div>
+      </section>
+      <!-- GALLERY (THIS IS NOW THE NEXT SECTION WHEN SCROLLING) -->
+      <section class="section" id="gallery">
+        <h2 class="sectionTitle">Our Gallery</h2>
+        <div class="galleryGrid">
+          <div
+            class="gBig"
+            data-src="./images/gallery1.png"
+            data-title="Clinic Exterior"
+          >
+            <img
+              alt="Clinic exterior"
+              data-fallback="images/gallery1.png"
+              src="images/gallery1.png"
+            />
+          </div>
+          <div
+            class="gBig"
+            data-src="./images/gallery2.png"
+            data-title="Reception Area"
+          >
+            <img
+              alt="Reception area"
+              data-fallback="images/gallery2.png"
+              src="images/gallery2.png"
+            />
+          </div>
+        </div>
+        <div class="gSmallRow">
+          <div
+            class="gSmall"
+            data-src="./images/gallery3.png"
+            data-title="Pharmacy"
+          >
+            <img
+              alt="Pharmacy"
+              data-fallback="assets/g3.jpg"
+              src="images/gallery3.png"
+            />
+          </div>
+          <div
+            class="gSmall"
+            data-src="./images/gallery4.png"
+            data-title="Waiting Area"
+          >
+            <img
+              alt="Waiting area"
+              data-fallback="assets/g4.jpg"
+              src="images/gallery4.png"
+            />
+          </div>
+          <div
+            class="gSmall"
+            data-src="./images/gallery1.png"
+            data-title="Consultation Room"
+          >
+            <img
+              alt="Consultation room"
+              data-fallback="assets/g5.jpg"
+              src="images/gallery1.png"
+            />
+          </div>
+          <div
+            class="gSmall"
+            data-src="./images/gallery2.png"
+            data-title="Doctor Cabin"
+          >
+            <img
+              alt="Doctor cabin"
+              data-fallback="assets/g6.jpg"
+              src="images/gallery2.png"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- REVIEWS (NEXT SECTION ON SCROLL) -->
+      <section class="section" id="reviews">
+        <h2 class="sectionTitle">Our Reviews</h2>
+        <div class="reviewShell">
+          <button aria-label="Previous" class="arrow left" id="prev">
+            <svg fill="none" viewbox="0 0 24 24">
+              <path
+                d="M14.5 6.5L9 12l5.5 5.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </button>
+          <button aria-label="Next" class="arrow right" id="next">
+            <svg fill="none" viewbox="0 0 24 24">
+              <path
+                d="M9.5 6.5L15 12l-5.5 5.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </button>
+          <div class="review-viewport">
+            <div class="rTrack" id="rTrack">
+              <div class="reviewCard">
+                <img
+                  alt="Reviewer"
+                  class="avatar"
+                  src="https://i.pravatar.cc/80?img=32"
+                />
+                <p>
+                  The doctors at Valsalya are incredibly patient and
+                  professional. The lab results were quick and staff is helpful.
+                </p>
+                <div class="stars">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="reviewCard">
+                <img
+                  alt="Reviewer"
+                  class="avatar"
+                  src="https://i.pravatar.cc/80?img=12"
+                />
+                <p>
+                  Very clean clinic and well-organized reception. Consultation
+                  was smooth and they explained everything clearly.
+                </p>
+                <div class="stars">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="reviewCard">
+                <img
+                  alt="Reviewer"
+                  class="avatar"
+                  src="https://i.pravatar.cc/80?img=5"
+                />
+                <p>
+                  The lab package prices are worth it. Reports came fast and the
+                  staff guided us properly throughout.
+                </p>
+                <div class="stars">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="reviewCard">
+                <img
+                  alt="Reviewer"
+                  class="avatar"
+                  src="https://i.pravatar.cc/80?img=22"
+                />
+                <p>
+                  Friendly doctors and staff. Good consultation timings and easy
+                  to reach from Pallickal.
+                </p>
+                <div class="stars">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4-6 4 1.6-7.8L2 9h7z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dots" id="dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+        <div id="contactAnchor" class="spacer-12"></div>
+      </section>
+    </div>
+    <!-- Lightbox -->
+    <div aria-hidden="true" class="lightbox" id="lightbox">
+      <div aria-modal="true" class="lbPanel" role="dialog">
+        <div class="lbTop">
+          <span id="lbTitle">Preview</span>
+          <button class="lbClose" id="lbClose">✕</button>
+        </div>
+        <img alt="Expanded image" class="lbImg" id="lbImg" src="" />
+      </div>
+    </div>
+    <section class="hospital-card">
+      <div class="hospital-grid">
+        <!-- LEFT: IMAGE -->
+        <div class="hospital-media">
+          <img alt="Hospital building" src="./images/gallery1.png" />
+        </div>
+        <!-- RIGHT: CONTENT -->
+        <div class="hospital-info">
+          <h2 class="hospital-title">Valsalya Speciality Clinic</h2>
+          <div class="hospital-address">
+            <span aria-hidden="true" class="icon-pin"></span>
+            <span>
+              <b>Address :</b> 7-1-71/A/1, Dharam Karan Rd, ShivBagh, Ameerpet,
+              Hyderabad - 500016
+            </span>
+          </div>
+          <!-- DESCRIPTION -->
+          <p class="hospital-desc">
+            This is where advanced medical care and compassion blend to offer
+            personalized care at every step of your treatment journey. Our
+            experienced team.
+          </p>
+          <!-- TOP SPECIALITIES -->
+          <h3 class="hospital-subtitle">Top Specialities</h3>
+          <div class="spec-pills">
+            <a class="pill" href="#">Orthopedics</a>
+            <a class="pill" href="#">Gynaecology</a>
+            <a class="pill" href="#">Proctology</a>
+            <a class="pill pill-more" href="#">3 + More</a>
+          </div>
+          <!-- CTA BUTTONS -->
+          <div class="hospital-ctas">
+            <a
+              class="btn-outline"
+              href="https://maps.app.goo.gl/RDGg6yBF5bYPbX2a7"
+            >
+              <span aria-hidden="true" class="btn-ico"></span>
+              Get Directions
+            </a>
+            <a class="btn-solid" href="tel:+918943893499">
+              <span aria-hidden="true" class="btn-phone"></span>
+              Call Us
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hospital-grid">
+        <!-- LEFT: IMAGE -->
+        <div class="hospital-media">
+          <img alt="Hospital building" src="./images/gallery2.png" />
+        </div>
+        <!-- RIGHT: CONTENT -->
+        <div class="hospital-info">
+          <h2 class="hospital-title">Valsalya Speciality Clinic</h2>
+          <div class="hospital-address">
+            <span aria-hidden="true" class="icon-pin"></span>
+            <span> <b>Address :</b> Kottukkal </span>
+          </div>
+          <!-- DESCRIPTION -->
+          <p class="hospital-desc">
+            This is where advanced medical care and compassion blend to offer
+            personalized care at every step of your treatment journey. Our
+            experienced team.
+          </p>
+          <!-- TOP SPECIALITIES -->
+          <h3 class="hospital-subtitle">Top Specialities</h3>
+          <div class="spec-pills">
+            <a class="pill" href="#">Orthopedics</a>
+            <a class="pill" href="#">Gynaecology</a>
+            <a class="pill" href="#">Proctology</a>
+            <a class="pill pill-more" href="#">3 + More</a>
+          </div>
+          <!-- CTA BUTTONS -->
+          <div class="hospital-ctas">
+            <a
+              class="btn-outline"
+              href="https://maps.app.goo.gl/RDGg6yBF5bYPbX2a7"
+            >
+              <span aria-hidden="true" class="btn-ico"></span>
+              Get Directions
+            </a>
+            <a class="btn-solid" href="tel:+918943893499">
+              <span aria-hidden="true" class="btn-phone"></span>
+              Call Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="clinic-footer" id="contact">
+      <div class="footer-inner">
+        <!-- BRAND -->
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <img alt="" src="./images/logofinal.png" />
+            <!-- <div>
+          <div class="footer-name">Valsalya</div>
+          <div class="footer-sub">Speciality Clinic</div>
+        </div> -->
+          </div>
+          <p class="footer-desc">
+            Compassionate care with trusted specialists and advanced diagnostic
+            services. Serving the Pallickal community with quality healthcare
+            under one roof.
+          </p>
+        </div>
+        <!-- QUICK LINKS -->
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#specialities">Specialities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+        </div>
+        <!-- CONTACT -->
+        <div class="footer-col">
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-pill">
+            <span aria-hidden="true" class="fp-ico fp-phone"></span>
+            <!-- <span aria-hidden="true" class="fa-solid fa-phone"></span> -->
+
+            <div>
+              <div class="fp-label">Phone</div>
+              <div class="fp-val">
+                <a href="tel:8943893499">8943893499</a> ·
+                <a href="tel:8943893491">8943893491</a> ·
+                <a href="tel:04702683313">0470-2683313</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-pill">
+            <span aria-hidden="true" class="fp-ico fp-mail"></span>
+            <div>
+              <div class="fp-label">Email</div>
+              <div class="fp-val">
+                <a href="mailto:info@valsalyaclinic.com"
+                  >info@valsalyaclinic.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="footer-pill">
+            <span aria-hidden="true" class="fp-ico fp-pin"></span>
+            <div>
+              <div class="fp-label">Address</div>
+              <div class="fp-val">Pallickal, Kerala</div>
+            </div>
+          </div>
+        </div>
+        <!-- HOURS + BRANCHES -->
+        <div class="footer-col">
+          <h4 class="footer-title">Clinic Hours</h4>
+          <div class="footer-pill">
+            <span aria-hidden="true" class="fp-ico fp-clock"></span>
+            <div>
+              <div class="fp-label">Working Hours</div>
+              <div class="fp-val">Mon – Sat: 9:00 AM – 7:00 PM</div>
+            </div>
+          </div>
+          <h4 class="footer-title mt-14">Our Branches</h4>
+          <div class="branch-list">
+            <span class="branch-chip">Pallickal</span>
+            <span class="branch-chip">Second Branch Name</span>
+          </div>
+        </div>
+      </div>
+      <!-- BOTTOM BAR -->
+      <div class="footer-bottom">
+        <div class="fb-left">
+          © <span id="year"></span> Valsalya Speciality Clinic. All rights
+          reserved.
+        </div>
+        <div class="fb-right">
+          <a aria-label="Facebook" class="social" href="#">
+            <span aria-hidden="true" class="soc-dot"></span> Facebook
+          </a>
+          <a aria-label="Instagram" class="social" href="#">
+            <span aria-hidden="true" class="soc-dot"></span> Instagram
+          </a>
+          <a aria-label="Google Maps" class="social" href="#">
+            <span aria-hidden="true" class="soc-dot"></span> Google Maps
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specialities | Valsalya Speciality Clinic</title>
+
+    <!-- Reuse your main CSS if you want -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <!-- Specialities page CSS -->
+    <link rel="stylesheet" href="specialities.css" />
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+  </head>
+  <body>
+    <!-- Simple header (you can reuse your existing header) -->
+    <header>
+          <div class="heroTop">
+            <div class="brand">
+              <div aria-hidden="true" class="logo">
+                <img alt="Valsalya Clinic logo" src="./images/logofinal.png" />
+              </div>
+            </div>
+            <nav aria-label="Site navigation" class="nav">
+              <a  href="./index.html">Home</a>
+              <a class="active" href="#specialities">Specialities</a>
+              <a href="index.html#gallery">Gallery</a>
+              <a href="index.html#reviews">Reviews</a>
+              <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="actions">
+              <div class="branchWrap">
+                <button class="btn btnBranch" id="branchBtn">
+                  Our Branches
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    height="14"
+                    viewbox="0 0 24 24"
+                    width="14"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="dropdown" id="branchDropdown">
+                  <div class="ddItem selected" data-branch="Pallickal">
+                    <div>
+                      <div class="fw-800">Pallickal</div>
+                      <small>(Selected)</small>
+                    </div>
+                    <div aria-hidden="true" class="tick">
+                      <svg fill="none" viewbox="0 0 24 24">
+                        <path
+                          d="M6 12.5l4 4 8-9"
+                          stroke="#0e5aa7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2.3"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ddItem" data-branch="Second Branch Name">
+                    <div class="fw-800">Second Branch Name</div>
+                    <div aria-hidden="true" class="tick">
+                      <svg fill="none" viewbox="0 0 24 24">
+                        <path
+                          d="M6 12.5l4 4 8-9"
+                          stroke="#0e5aa7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2.3"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="btn btnPrimary"
+                href="https://wa.me/917907017504?text=Hi%20Valsalya%20Speciality%20Clinic%2C%20I%20want%20to%20book%20an%20appointment."
+                target="_blank"
+                rel="noopener"
+              >
+                Book Appointment
+              </a>
+            </div>
+          </div>
+        </header>
+    <main class="spPage" id="top">
+      <section class="spHero">
+        <h1>Our Specialities</h1>
+        <p>
+          Meet our doctors and check available days & timings. Tap “Book an
+          Appointment” to WhatsApp us.
+        </p>
+      </section>
+
+      <section class="spList">
+        <!-- ============ ORTHOPAEDICS ============ -->
+        <article class="spCard" id="orthopaedics">
+          <div class="spDoc">
+            <img
+              class="spAvatar"
+              src="./images/doctor.png"
+              alt="Dr. Akhilesh Arjun"
+            />
+            <div class="spDocName">
+              <h3>Dr. Akhilesh Arjun</h3>
+              <p>(MBBS, MS ORTHO)</p>
+            </div>
+          </div>
+
+          <div class="spDivider" aria-hidden="true"></div>
+
+          <div class="spInfo">
+            <h2>Orthopaedics</h2>
+            <p>
+              Specialized care for bones, joints, ligaments, tendons, and
+              muscles. We offer comprehensive diagnosis, treatment, and
+              rehabilitation for musculoskeletal conditions.
+            </p>
+          </div>
+
+          <div class="spMeta">
+            <div class="spMetaRow">
+              <span class="spIcon" aria-hidden="true">
+                <!-- calendar -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M8 2v3M16 2v3M3 9h18"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M5 6h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"
+                    stroke-width="1.8"
+                  />
+                </svg>
+              </span>
+              <div>
+                <b>Working Days</b>
+                <div>Tue & Thu</div>
+              </div>
+            </div>
+
+            <div class="spMetaRow">
+              <span class="spIcon" aria-hidden="true">
+                <!-- clock -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M12 8v5l3 2"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    stroke-width="1.8"
+                  />
+                </svg>
+              </span>
+              <div>
+                <b>Working Hours</b>
+                <div>6 PM – 8 PM</div>
+              </div>
+            </div>
+
+            <a
+              class="spBtn"
+              href="https://wa.me/917907017504?text=Hi%20Valsalya%20Clinic%2C%20I%20want%20to%20book%20an%20appointment%20for%20Orthopaedics."
+              target="_blank"
+              rel="noopener"
+            >
+              Book an Appointment
+            </a>
+          </div>
+        </article>
+
+        <!-- ============ ENT ============ -->
+        <article class="spCard" id="ent">
+          <div class="spDoc">
+            <img
+              class="spAvatar"
+              src="./images/doctor.png"
+              alt="Dr. Rohan Abraham Rajan"
+            />
+            <div class="spDocName">
+              <h3>Dr. Rohan Abraham Rajan</h3>
+              <p>(MBBS, DLO, DNB)</p>
+            </div>
+          </div>
+
+          <div class="spDivider" aria-hidden="true"></div>
+
+          <div class="spInfo">
+            <h2>ENT</h2>
+            <p>
+              Consultation and treatment for ear, nose, and throat conditions
+              including infections, hearing issues, sinus problems, allergies,
+              and voice/throat disorders.
+            </p>
+          </div>
+
+          <div class="spMeta">
+            <div class="spMetaRow">
+              <span class="spIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M8 2v3M16 2v3M3 9h18"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M5 6h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"
+                    stroke-width="1.8"
+                  />
+                </svg>
+              </span>
+              <div>
+                <b>Working Days</b>
+                <div>Sat</div>
+              </div>
+            </div>
+
+            <div class="spMetaRow">
+              <span class="spIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M12 8v5l3 2"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    stroke-width="1.8"
+                  />
+                </svg>
+              </span>
+              <div>
+                <b>Working Hours</b>
+                <div>6 PM – 7 PM</div>
+              </div>
+            </div>
+
+            <a
+              class="spBtn"
+              href="https://wa.me/917907017504?text=Hi%20Valsalya%20Clinic%2C%20I%20want%20to%20book%20an%20appointment%20for%20ENT."
+              target="_blank"
+              rel="noopener"
+            >
+              Book an Appointment
+            </a>
+          </div>
+        </article>
+
+        <!-- Add more cards by copying the <article class="spCard"> block -->
+      </section>
+    </main>
+    <footer class="clinic-footer" id="contact">
+      <div class="footer-inner">
+        <!-- BRAND -->
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <img alt="" src="./images/logofinal.png" />
+            <!-- <div>
+          <div class="footer-name">Valsalya</div>
+          <div class="footer-sub">Speciality Clinic</div>
+        </div> -->
+          </div>
+          <p class="footer-desc">
+            Compassionate care with trusted specialists and advanced diagnostic
+            services. Serving the Pallickal community with quality healthcare
+            under one roof.
+          </p>
+        </div>
+        <!-- QUICK LINKS -->
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#specialities">Specialities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+        </div>
+        <!-- CONTACT -->
+        <div class="footer-col">
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-pill">
+            <span aria-hidden="true" class="fp-ico fp-phone"></span>
+            <div>
+              <div class="fp-label">Phone</div>
+              <div class="fp-val">
+                <a href="tel:8943893499">8943893499</a> ·
+                <a href="tel:8943893491">8943893491</a> ·
+                <a href="tel:04702683313">0470-2683313</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-pill">
+            <span aria-hidden="true" class="fp-ico fp-mail"></span>
+            <div>
+              <div class="fp-label">Email</div>
+              <div class="fp-val">
+                <a href="mailto:info@valsalyaclinic.com"
+                  >info@valsalyaclinic.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="footer-pill">
+            <span aria-hidden="true" class="fp-ico fp-pin"></span>
+            <div>
+              <div class="fp-label">Address</div>
+              <div class="fp-val">Pallickal, Kerala</div>
+            </div>
+          </div>
+        </div>
+        <!-- HOURS + BRANCHES -->
+        <div class="footer-col">
+          <h4 class="footer-title">Clinic Hours</h4>
+          <div class="footer-pill">
+            <span aria-hidden="true" class="fp-ico fp-clock"></span>
+            <div>
+              <div class="fp-label">Working Hours</div>
+              <div class="fp-val">Mon – Sat: 9:00 AM – 7:00 PM</div>
+            </div>
+          </div>
+          <h4 class="footer-title mt-14">Our Branches</h4>
+          <div class="branch-list">
+            <span class="branch-chip">Pallickal</span>
+            <span class="branch-chip">Second Branch Name</span>
+          </div>
+        </div>
+      </div>
+      <!-- BOTTOM BAR -->
+      <div class="footer-bottom">
+        <div class="fb-left">
+          © <span id="year"></span> Valsalya Speciality Clinic. All rights
+          reserved.
+        </div>
+        <div class="fb-right">
+          <a aria-label="Facebook" class="social" href="#">
+            <span aria-hidden="true" class="soc-dot"></span> Facebook
+          </a>
+          <a aria-label="Instagram" class="social" href="#">
+            <span aria-hidden="true" class="soc-dot"></span> Instagram
+          </a>
+          <a aria-label="Google Maps" class="social" href="#">
+            <span aria-hidden="true" class="soc-dot"></span> Google Maps
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

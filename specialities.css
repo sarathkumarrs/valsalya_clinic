@@ -1,0 +1,269 @@
+:root {
+  --bg: #f5f8fd;
+  --card: #ffffff;
+  --text: #0f1c2e;
+  --muted: #5a6b82;
+  --border: #e6eef9;
+
+  --teal: #0f8a8a; /* button + title accent like screenshot */
+  --shadow: 0 10px 28px rgba(16, 24, 40, 0.1);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header */
+.spHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.spHeaderInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.spBrand img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  display: block;
+}
+.spNav {
+  margin-left: auto;
+  display: flex;
+  gap: 14px;
+}
+.spNav a {
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: #18324f;
+}
+.spNav a:hover {
+  background: #eef6ff;
+}
+
+.spCta {
+  background: var(--teal);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(15, 138, 138, 0.22);
+}
+.spCta:hover {
+  filter: brightness(0.98);
+}
+
+/* Page */
+.spPage {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 26px 18px 44px;
+}
+.spHero {
+  padding: 18px 6px 10px;
+}
+.spHero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(24px, 3vw, 36px);
+}
+.spHero p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Cards */
+.spList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.spCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 260px 2px 1fr 320px;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Left doctor block */
+.spDoc {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.spAvatar {
+  width: 78px;
+  height: 78px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 6px solid #e9edf3;
+}
+.spDocName h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.spDocName p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Divider like the screenshot */
+.spDivider {
+  width: 2px;
+  height: 92px;
+  background: #d6e7ef;
+  border-radius: 10px;
+  justify-self: center;
+}
+
+/* Middle content */
+.spInfo h2 {
+  margin: 0 0 6px;
+  color: var(--teal);
+  font-size: 28px;
+  line-height: 1.05;
+}
+.spInfo p {
+  margin: 0;
+  color: #2a3b52;
+  max-width: 520px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Right meta + button */
+.spMeta {
+  justify-self: end;
+  width: 100%;
+  max-width: 320px;
+  display: grid;
+  gap: 12px;
+}
+.spMetaRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.spIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(15, 138, 138, 0.12);
+  display: grid;
+  place-items: center;
+  color: var(--teal);
+}
+.spIcon svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.spMetaRow b {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+.spMetaRow div div {
+  font-weight: 800;
+  color: #17324a;
+  font-size: 13px;
+}
+
+.spBtn {
+  margin-top: 6px;
+  background: var(--teal);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 999px;
+  text-align: center;
+  font-weight: 800;
+  box-shadow: 0 10px 18px rgba(15, 138, 138, 0.2);
+}
+.spBtn:hover {
+  filter: brightness(0.98);
+}
+
+/* Footer */
+.spFooter {
+  padding: 26px 18px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 980px) {
+  .spCard {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .spDivider {
+    width: 100%;
+    height: 1px;
+  }
+  .spMeta {
+    justify-self: start;
+    max-width: 100%;
+  }
+  .spInfo h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 620px) {
+  .spNav {
+    display: none;
+  }
+  .spCta {
+    margin-left: auto;
+  }
+
+  .spDoc {
+    gap: 12px;
+  }
+  .spAvatar {
+    width: 68px;
+    height: 68px;
+  }
+  .spBtn {
+    width: 100%;
+  }
+}

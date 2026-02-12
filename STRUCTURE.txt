@@ -1,0 +1,13 @@
+Project structure (clean separation)
+
+formatted_site/
+  index.html          # HTML only (no inline CSS/JS)
+  index.css           # CSS moved from the old <style> block in index.html
+  main.js             # JS moved from old <script> blocks + inline handlers
+  style.css           # Your existing stylesheet (hospital card + footer styles)
+  specialities.html
+  specialities.css
+
+Notes:
+- index.html links style.css first, then index.css (to preserve the original CSS override order).
+- main.js is loaded at the end of <body>, same as before.
