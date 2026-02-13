@@ -225,7 +225,7 @@
   background: #f8fafc;
 }
 .pill-more {
-  color: #2563eb;
+  color: #03503c;
 }
 
 /* CTA buttons */
@@ -255,8 +255,8 @@
   min-width: 240px;
   padding: 14px 16px;
   border-radius: 10px;
-  border: 2px solid #0b4f98;
-  background: #0b4f98;
+  border: 2px solid #147451;
+  background: #07502f;
   color: #fff;
   font-weight: 800;
 }
