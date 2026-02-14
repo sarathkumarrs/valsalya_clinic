@@ -108,53 +108,126 @@
   const prev = document.getElementById("prev");
   const next = document.getElementById("next");
   const dotsWrap = document.getElementById("dots");
-  const dots = dotsWrap ? Array.from(dotsWrap.children) : [];
+  const viewport = track ? track.closest(".review-viewport") : null;
 
   let index = 0;
 
+  function isMobileReviews() {
+    return window.matchMedia("(max-width: 980px)").matches;
+  }
+
   function maxIndex() {
     if (!track) return 0;
-    const isMobile = window.matchMedia("(max-width: 980px)").matches;
     const total = track.children.length;
-    return isMobile ? total - 1 : total - 3;
+    const max = isMobileReviews() ? total - 1 : total - 3;
+    return Math.max(0, max);
+  }
+
+  function slideStep() {
+    if (!track) return 0;
+
+    const card = track.querySelector(".reviewCard");
+    if (!card) return 0;
+
+    const styles = window.getComputedStyle(track);
+    const gap = parseFloat(styles.columnGap || styles.gap || "0") || 0;
+    return card.getBoundingClientRect().width + gap;
+  }
+
+  function ensureDots() {
+    if (!dotsWrap) return [];
+
+    const needed = maxIndex() + 1;
+    if (dotsWrap.children.length !== needed) {
+      dotsWrap.innerHTML = "";
+      for (let i = 0; i < needed; i += 1) {
+        const dot = document.createElement("div");
+        dot.className = "dot";
+        dotsWrap.appendChild(dot);
+      }
+    }
+
+    return Array.from(dotsWrap.children);
   }
 
   function update() {
     if (!track) return;
 
-    const isMobile = window.matchMedia("(max-width: 980px)").matches;
+    index = Math.min(Math.max(0, index), maxIndex());
+    track.style.transform = `translateX(${-index * slideStep()}px)`;
 
-    if (isMobile) {
-      track.style.transform = `translateX(${-index * 100}%)`;
-      dots.forEach((d) => d.classList.remove("active"));
-      if (dots[index]) dots[index].classList.add("active");
-    } else {
-      const card = track.querySelector(".reviewCard");
-      if (!card) return;
-
-      const w = card.getBoundingClientRect().width + 14;
-      track.style.transform = `translateX(${-index * w}px)`;
-      dots.forEach((d) => d.classList.remove("active"));
-      if (dots.length) dots[Math.min(index, 1)].classList.add("active");
-    }
+    const dots = ensureDots();
+    dots.forEach((d, i) => d.classList.toggle("active", i === index));
   }
 
-  if (prev && next && track) {
-    prev.addEventListener("click", () => {
-      index = Math.max(0, index - 1);
-      update();
-    });
+  if (track) {
+    if (prev) {
+      prev.addEventListener("click", () => {
+        index = Math.max(0, index - 1);
+        update();
+      });
+    }
 
-    next.addEventListener("click", () => {
-      index = Math.min(maxIndex(), index + 1);
-      update();
-    });
+    if (next) {
+      next.addEventListener("click", () => {
+        index = Math.min(maxIndex(), index + 1);
+        update();
+      });
+    }
 
-    window.addEventListener("resize", () => {
-      index = Math.min(index, maxIndex());
-      update();
-    });
+    if (dotsWrap) {
+      dotsWrap.addEventListener("click", (e) => {
+        const dot = e.target.closest(".dot");
+        if (!dot || !dotsWrap.contains(dot)) return;
 
+        const nextIndex = Array.from(dotsWrap.children).indexOf(dot);
+        if (nextIndex < 0) return;
+
+        index = Math.min(maxIndex(), nextIndex);
+        update();
+      });
+    }
+
+    if (viewport) {
+      let touchStartX = 0;
+      let touchStartY = 0;
+      const SWIPE_THRESHOLD = 40;
+
+      viewport.addEventListener(
+        "touchstart",
+        (e) => {
+          const touch = e.changedTouches[0];
+          touchStartX = touch.clientX;
+          touchStartY = touch.clientY;
+        },
+        { passive: true },
+      );
+
+      viewport.addEventListener(
+        "touchend",
+        (e) => {
+          const touch = e.changedTouches[0];
+          const dx = touch.clientX - touchStartX;
+          const dy = touch.clientY - touchStartY;
+
+          if (Math.abs(dx) <= Math.abs(dy) || Math.abs(dx) < SWIPE_THRESHOLD) {
+            return;
+          }
+
+          if (dx < 0) {
+            index = Math.min(maxIndex(), index + 1);
+          } else {
+            index = Math.max(0, index - 1);
+          }
+
+          update();
+        },
+        { passive: true },
+      );
+    }
+
+    window.addEventListener("resize", update);
     update();
   }
+
 })();
