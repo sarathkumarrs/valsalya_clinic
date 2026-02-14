@@ -422,7 +422,7 @@
   position: absolute;
   inset: 10px;
   border-radius: 8px;
-  background: #0f172a;
+  /* background: #0f172a; */
   opacity: 0.12;
 }
 
