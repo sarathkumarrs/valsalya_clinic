@@ -53,6 +53,14 @@
           .forEach((x) => x.classList.remove("selected"));
         item.classList.add("selected");
         branchDropdown.classList.remove("open");
+
+        const targetSelector = item.getAttribute("data-scroll-target");
+        if (!targetSelector) return;
+
+        const target = document.querySelector(targetSelector);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       });
     });
   }

@@ -59,7 +59,11 @@
                   </svg>
                 </button>
                 <div class="dropdown" id="branchDropdown">
-                  <div class="ddItem selected" data-branch="Pallickal">
+                  <div
+                    class="ddItem selected"
+                    data-branch="Pallickal"
+                    data-scroll-target="#branch-pallickal"
+                  >
                     <div>
                       <div class="fw-800">PALLICKAL</div>
                       <small>(Selected)</small>
@@ -76,7 +80,11 @@
                       </svg>
                     </div>
                   </div>
-                  <div class="ddItem" data-branch="Second Branch Name">
+                  <div
+                    class="ddItem"
+                    data-branch="Kappamvila"
+                    data-scroll-target="#branch-kappamvila"
+                  >
                     <div class="fw-800">KAPPAMVILA</div>
                     <div aria-hidden="true" class="tick">
                       <svg fill="none" viewbox="0 0 24 24">
@@ -549,7 +557,7 @@
       </div>
     </div>
     <section class="hospital-card">
-      <div class="hospital-grid">
+      <div class="hospital-grid" id="branch-pallickal">
         <!-- LEFT: IMAGE -->
         <div class="hospital-media">
           <img alt="Hospital building" src="./images/pallickal_clinic.jpeg" />
@@ -607,7 +615,7 @@
 
         </div>
       </div>
-      <div class="hospital-grid">
+      <div class="hospital-grid" id="branch-kappamvila">
         <!-- LEFT: IMAGE -->
         <div class="hospital-media">
           <img alt="Hospital building" src="./images/gallery2.png" />
