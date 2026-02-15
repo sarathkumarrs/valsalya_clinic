@@ -241,13 +241,28 @@ img {
 
 /* HERO MAIN */
 .heroMain {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   min-height: clamp(460px, calc(100svh - 72px), 760px);
+  position: relative;
+  overflow: hidden;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(6, 74, 72, 0.34) 0%,
+      rgba(6, 74, 72, 0.14) 38%,
+      rgba(6, 74, 72, 0.03) 64%,
+      rgba(6, 74, 72, 0) 100%
+    ),
+    url("./images/spotlight.jpeg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
 }
 @media (max-width: 860px) {
   .heroMain {
+    display: grid;
     grid-template-columns: 1fr;
+    background: none;
+    min-height: auto;
   }
   .nav {
     display: none;
@@ -258,18 +273,46 @@ img {
   .heroTop {
     position: static;
   }
+  .heroLeft {
+    order: 1;
+    width: 100%;
+    min-height: auto;
+    background: #0f8a8a;
+  }
+  .heroRight {
+    order: 2;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background: #e9f3ff;
+    min-height: 260px;
+  }
+  .heroRight .heroImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .heroLeft {
+  width: 100%;
+  min-height: inherit;
   padding: 26px;
   color: #fff;
   background:
-    linear-gradient(90deg, #0f8a8a, #01332fbd),
-    radial-gradient(
-      600px 380px at 25% 30%,
-      rgba(167, 86, 86, 0.15),
-      transparent 70%
+    linear-gradient(
+      94deg,
+      rgba(15, 138, 138, 0.98) 0%,
+      rgba(12, 126, 118, 0.96) 40%,
+      rgba(11, 112, 106, 0.82) 58%,
+      rgba(11, 112, 106, 0.55) 74%,
+      rgba(11, 112, 106, 0.2) 88%,
+      rgba(11, 112, 106, 0) 100%
     );
+  position: relative;
+  z-index: 1;
 
   /* ✅ center the content vertically + horizontally */
   display: flex;
@@ -320,24 +363,19 @@ img {
   cursor: pointer;
 }
 
-.heroRight {
-  position: relative;
-  overflow: hidden;
-  background: #e9f3ff;
-  min-height: 260px;
-}
-.heroRight .heroImg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.heroRight::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(9, 74, 145, 0.25), transparent 45%);
+@media (min-width: 861px) {
+  .heroLeft {
+    width: min(58%, 760px);
+  }
+  .heroRight {
+    display: none;
+  }
+  .heroRight .heroImg {
+    position: static;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 /* SECTION WRAPPER (so gallery/reviews are "next sections") */
@@ -849,3 +887,4 @@ img {
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
 }
+

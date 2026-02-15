@@ -54,9 +54,13 @@
                   </svg>
                 </button>
                 <div class="dropdown" id="branchDropdown">
-                  <div class="ddItem selected" data-branch="Pallickal">
+                  <div
+                    class="ddItem selected"
+                    data-branch="Pallickal"
+                    data-scroll-target="#branch-pallickal"
+                  >
                     <div>
-                      <div class="fw-800">Pallickal</div>
+                      <div class="fw-800">PALLICKAL</div>
                       <small>(Selected)</small>
                     </div>
                     <div aria-hidden="true" class="tick">
@@ -71,8 +75,12 @@
                       </svg>
                     </div>
                   </div>
-                  <div class="ddItem" data-branch="Second Branch Name">
-                    <div class="fw-800">Second Branch Name</div>
+                  <div
+                    class="ddItem"
+                    data-branch="Kappamvila"
+                    data-scroll-target="#branch-kappamvila"
+                  >
+                    <div class="fw-800">KAPPAMVILA</div>
                     <div aria-hidden="true" class="tick">
                       <svg fill="none" viewbox="0 0 24 24">
                         <path
@@ -150,30 +158,10 @@
                 </svg>
               </span>
               <div>
-                <b>Working Days</b>
-                <div>Mon & Thu</div>
-              </div>
-            </div>
-
-            <div class="spMetaRow">
-              <span class="spIcon" aria-hidden="true">
-                <!-- clock -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path
-                    d="M12 8v5l3 2"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                    stroke-width="1.8"
-                  />
-                </svg>
-              </span>
-              <div>
-                <b>Working Hours</b>
-                <div>5 PM – 7 PM</div>
+                <b>Working Days &amp; Timings</b>
+                <div>Monday 5 PM - 7 PM</div>
+                <div>Thursday 6.30 PM - 8 PM</div>
+                <div>Thursday (Kappamvila) 5 PM- 6 PM</div>
               </div>
             </div>
 
@@ -434,7 +422,7 @@
             />
             <div class="spDocName">
               <h3>Dr. Sajith.S.L</h3>
-              <p>(MD RESPIRATORY MEDICINE 
+              <p>(MD RESPIRATORY MEDICINE ,
                  CONSULTANT PULMONOLOGIST, 
                  ALLERGY ASTHMA SLEEP MEDICINE SPECIALIST)</p>
             </div>
@@ -735,7 +723,8 @@
   </div>
 
 </div>
-   <h4 class="footer-title mt-14">Our Branches</h4>
+        <div class="footer-col">
+          <h4 class="footer-title mt-14">Our Branches</h4>
           <div class="branch-list">
             <span class="branch-chip">Pallickal</span>
             <span class="branch-chip">Kappamvila</span>
@@ -762,5 +751,6 @@
         </div>
       </div>
     </footer>
+    <script src="./main.js"></script>
   </body>
 </html>

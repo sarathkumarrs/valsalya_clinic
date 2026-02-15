@@ -60,6 +60,14 @@
         const target = document.querySelector(targetSelector);
         if (target) {
           target.scrollIntoView({ behavior: "smooth", block: "start" });
+          return;
+        }
+
+        // If this page doesn't have the branch section, jump to index page branch.
+        const pageName = window.location.pathname.split("/").pop().toLowerCase();
+        const isIndexPage = pageName === "" || pageName === "index.html";
+        if (!isIndexPage && targetSelector.startsWith("#")) {
+          window.location.href = `index.html${targetSelector}`;
         }
       });
     });
